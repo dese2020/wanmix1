@@ -1,0 +1,54 @@
+{
+  "input": {
+    //define cual workflow usar, 20s, 15s, 10s, 5s segundos, 20s es por defecto, al cambiar se debe cambiar tambien el workflow
+    "duracion": "10s",
+    // Imagen de entrada (elige UNA fuente)
+    "image_url": "https://.../input.jpg",
+    // "image_path": "/data/input.jpg",
+    // "image_base64": "<...>",
+
+    // Overrides básicos
+    "width": 480,
+    "height": 832,
+    "fps": 16,
+    "frames_per_section": 81,
+
+    // Prompts (o usa 'prompt' único)
+    "prompts": [
+      "She is talking to the camera...",
+      "She stands up... full body is shown...",
+      "She walks towards the viewer confidently...",
+      "She walks towards the viewer... she stops and turns..."
+    ],
+    "negative_prompt": "bright tones, overexposed, static, ...",
+
+    // Video options (opcional)
+    "crf": 19,
+    "pix_fmt": "yuv420p",
+    "format": "video/h264-mp4",
+
+    // Overrides de modelos GGUF/weights (opcional)
+    "gguf": {
+      "clip_name": "umt5-xxl-encoder-Q8_0.gguf",
+      "clip_type": "wan",
+      "unet_high": "Wan2.2-I2V-A14B-HighNoise-Q8_0.gguf",
+      "unet_low":  "Wan2.2-I2V-A14B-LowNoise-Q8_0.gguf",
+      "vae_name":  "wan_2.1_vae.safetensors"
+    },
+
+    // Sobrescribir SOLO los 2 últimos LoRAs por rama (opcional)
+    "loras": {
+      "high": [
+        { "name": "SVI_v2_PRO_Wan2.2-I2V-A14B_HIGH_lora_rank_128_fp16.safetensors", "strength": 1.0 },
+        { "name": "my_high_extra_lora.safetensors", "strength": 0.7 }
+      ],
+      "low": [
+        { "name": "SVI_v2_PRO_Wan2.2-I2V-A14B_LOW_lora_rank_128_fp16.safetensors", "strength": 1.0 },
+        { "name": "my_low_extra_lora.safetensors", "strength": 0.7 }
+      ]
+    },
+
+    // (opcional) Cambiar ruta del workflow
+    "workflow_path": "SVI_extension_gguf_api.json"
+  }
+}
