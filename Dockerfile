@@ -49,8 +49,8 @@ RUN wget -q https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/LoRAs/Stabl
 	wget -q https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/vae/wan_2.1_vae.safetensors -O /ComfyUI/models/vae/wan_2.1_vae.safetensors && \
 	wget -q https://huggingface.co/city96/umt5-xxl-encoder-gguf/resolve/main/umt5-xxl-encoder-Q8_0.gguf -O /ComfyUI/models/text_encoders/umt5-xxl-encoder-Q8_0.gguf
 	
-RUN wget -q https://huggingface.co/BigDannyPt/Wan-2.2-Remix-GGUF/resolve/main/I2V/v3.0/High/wan22RemixT2VI2V_i2vHighV30-Q8_0.gguf -O /ComfyUI/models/diffusion_models/wan22RemixT2VI2V_i2vHighV30-Q8_0.gguf && \
-	wget -q https://huggingface.co/BigDannyPt/Wan-2.2-Remix-GGUF/resolve/main/I2V/v3.0/Low/wan22RemixT2VI2V_i2vLowV30-Q8_0.gguf -O /ComfyUI/models/diffusion_models/wan22RemixT2VI2V_i2vLowV30-Q8_0.gguf 
+RUN wget -q https://huggingface.co/BigDannyPt/Wan-2.2-Remix-GGUF/resolve/main/I2V/v3.0/High/wan22RemixT2VI2V_i2vHighV30-Q8_0.gguf -O /ComfyUI/models/diffusion_models/wan22RemixT2VI2V_i2vHighV30-Q8_0.gguf 
+RUN wget -q https://huggingface.co/BigDannyPt/Wan-2.2-Remix-GGUF/resolve/main/I2V/v3.0/Low/wan22RemixT2VI2V_i2vLowV30-Q8_0.gguf -O /ComfyUI/models/diffusion_models/wan22RemixT2VI2V_i2vLowV30-Q8_0.gguf 
 	
 RUN wget -q https://huggingface.co/datasets/hijdese2020/wan22_datalora/resolve/main/multi_nude/W22_Multiscene_Photoshoot_Softcore_i2v_HN.safetensors -O /ComfyUI/models/loras/W22_Multiscene_Photoshoot_Softcore_i2v_HN.safetensors && \                 
 	wget -q https://huggingface.co/datasets/hijdese2020/wan22_datalora/resolve/main/multi_nude/W22_Multiscene_Photoshoot_Softcore_i2v_LN.safetensors -O /ComfyUI/models/loras/W22_Multiscene_Photoshoot_Softcore_i2v_LN.safetensors && \                  
