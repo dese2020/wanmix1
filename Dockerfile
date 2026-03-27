@@ -95,9 +95,9 @@ RUN wget -q https://huggingface.co/hijdese2020/breast_insert/resolve/main/wan2.2
 	wget -q https://huggingface.co/datasets/hijdese2020/wan22_datalora/resolve/main/multiblow/W22_Multiscene_BJ_i2v_LN.safetensors -O /ComfyUI/models/loras/W22_Multiscene_BJ_i2v_LN.safetensors
 
 # Download models qwen
-RUN wget -q https://huggingface.co/Phr00t/Qwen-Image-Edit-Rapid-AIO/resolve/main/v23/Qwen-Rapid-AIO-NSFW-v23.safetensors -O /ComfyUI/models/diffusion_models/Qwen-Rapid-AIO-NSFW-v23.safetensors && \
-	wget -q https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors -O /ComfyUI/models/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors && \
-	wget -q https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/vae/qwen_image_vae.safetensors -O /ComfyUI/models/vae/qwen_image_vae.safetensors
+#RUN wget -q https://huggingface.co/Phr00t/Qwen-Image-Edit-Rapid-AIO/resolve/main/v23/Qwen-Rapid-AIO-NSFW-v23.safetensors -O /ComfyUI/models/diffusion_models/Qwen-Rapid-AIO-NSFW-v23.safetensors && \
+#	wget -q https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors -O /ComfyUI/models/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors && \
+#	wget -q https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/vae/qwen_image_vae.safetensors -O /ComfyUI/models/vae/qwen_image_vae.safetensors
 
 
 COPY . .
